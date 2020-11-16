@@ -11,8 +11,8 @@ import (
 	"sync/atomic"
 	"time"
 
-	"github.com/pion/logging"
-	"github.com/pion/randutil"
+	"github.com/CodesShareA/logging"
+	"github.com/CodesShareA/randutil"
 )
 
 // Use global random generator to properly seed by crypto grade random.
@@ -1691,7 +1691,7 @@ func (a *Association) handleForwardTSN(c *chunkForwardTSN) []*packet {
 	// report which stream identifier it skipped for unordered chunks.
 	// Therefore, we need to broadcast this event to all existing streams for
 	// unordered chunks.
-	// See https://github.com/pion/sctp/issues/106
+	// See https://github.com/CodesShareA/sctp/issues/106
 	for _, s := range a.streams {
 		s.handleForwardTSNForUnordered(c.newCumulativeTSN)
 	}

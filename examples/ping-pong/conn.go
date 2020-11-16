@@ -6,7 +6,7 @@ import (
 	"time"
 )
 
-// Reference: https://github.com/pion/sctp/blob/master/association_test.go
+// Reference: https://github.com/CodesShareA/sctp/blob/master/association_test.go
 // Since UDP is connectionless, as a server, it doesn't know how to reply
 // simply using the `Write` method. So, to make it work, `disconnectedPacketConn`
 // will infer the last packet that it reads as the reply address for `Write`

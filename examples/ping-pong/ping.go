@@ -7,8 +7,8 @@ import (
 	"log"
 	"net"
 
-	"github.com/pion/logging"
-	"github.com/pion/sctp"
+	"github.com/CodesShareA/logging"
+	"github.com/CodesShareA/sctp"
 )
 
 func main() {

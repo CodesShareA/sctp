@@ -66,10 +66,10 @@ jobs:
           -u $(id -u):$(id -g) \
           -e "GO111MODULE=on" \
           -e "CGO_ENABLED=0" \
-          -v $GITHUB_WORKSPACE:/go/src/github.com/pion/$(basename $GITHUB_WORKSPACE) \
+          -v $GITHUB_WORKSPACE:/go/src/github.com/CodesShareA/$(basename $GITHUB_WORKSPACE) \
           -v $HOME/go/pkg/mod:/go/pkg/mod \
           -v $HOME/.cache:/.cache \
-          -w /go/src/github.com/pion/$(basename $GITHUB_WORKSPACE) \
+          -w /go/src/github.com/CodesShareA/$(basename $GITHUB_WORKSPACE) \
           i386/golang:${{matrix.go}}-alpine \
           /usr/local/go/bin/go test \
             ${TEST_EXTRA_ARGS:-} \
