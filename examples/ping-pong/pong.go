@@ -8,7 +8,7 @@ import (
 	"net"
 	"time"
 
-	"github.com/CodesShareA/logging"
+	"github.com/pion/logging"
 	"github.com/CodesShareA/sctp"
 )
 

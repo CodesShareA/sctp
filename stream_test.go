@@ -3,7 +3,7 @@ package sctp
 import (
 	"testing"
 
-	"github.com/CodesShareA/logging"
+	"github.com/pion/logging"
 	"github.com/stretchr/testify/assert"
 )
 

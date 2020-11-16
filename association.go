@@ -11,8 +11,8 @@ import (
 	"sync/atomic"
 	"time"
 
-	"github.com/CodesShareA/logging"
-	"github.com/CodesShareA/randutil"
+	"github.com/pion/logging"
+	"github.com/pion/randutil"
 )
 
 // Use global random generator to properly seed by crypto grade random.
