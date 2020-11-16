@@ -1,4 +1,4 @@
-// +build pong
+// +build e2
 
 package main
 
