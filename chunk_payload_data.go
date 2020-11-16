@@ -87,12 +87,16 @@ type PayloadProtocolIdentifier uint32
 
 // PayloadProtocolIdentifier enums
 // https://www.iana.org/assignments/sctp-parameters/sctp-parameters.xhtml#sctp-parameters-25
+// o-ran related identifier maybe outdated
 const (
 	PayloadTypeWebRTCDCEP        PayloadProtocolIdentifier = 50
 	PayloadTypeWebRTCString      PayloadProtocolIdentifier = 51
 	PayloadTypeWebRTCBinary      PayloadProtocolIdentifier = 53
 	PayloadTypeWebRTCStringEmpty PayloadProtocolIdentifier = 56
 	PayloadTypeWebRTCBinaryEmpty PayloadProtocolIdentifier = 57
+	PayloadTypeORanE2CP          PayloadProtocolIdentifier = 70
+	PayloadTypeORanE2UP          PayloadProtocolIdentifier = 71
+	PayloadTypeORanE2DU          PayloadProtocolIdentifier = 72
 )
 
 func (p PayloadProtocolIdentifier) String() string {
@@ -107,6 +111,12 @@ func (p PayloadProtocolIdentifier) String() string {
 		return "WebRTC String (Empty)"
 	case PayloadTypeWebRTCBinaryEmpty:
 		return "WebRTC Binary (Empty)"
+	case PayloadTypeORanE2CP:
+		return "ORAN E2 Control Plane"
+	case PayloadTypeORanE2UP:
+		return "ORAN E2 User Plane"
+	case PayloadTypeORanE2DU:
+		return "ORAN E2 DU"
 	default:
 		return fmt.Sprintf("Unknown Payload Protocol Identifier: %d", p)
 	}
